@@ -1,0 +1,177 @@
+# Shell setup for make
+SHELL		= /bin/bash
+.SHELLFLAGS	= -o pipefail -c
+
+# Default target when invoking without specific target
+.DEFAULT_GOAL := all
+
+# Design platform and name to explore
+PLATFORM = mfda_30px
+#DESIGN   = PCR1
+#DESIGN   = smart_toilet_2_1
+#DESIGN   = smart_toilet_t
+DESIGN   = smart_toilet_t_opt
+#DESIGN   = smart_toilet_t2
+#DESIGN   = smart_toilet_t_mod1
+#DESIGN   = smart_toilet_t_mod2
+#DESIGN   = smart_toilet_t_mod3
+
+LOCAL_OR_DIR  = ./$(PLATFORM)/$(DESIGN)/openroad
+LOCAL_SCAD_DIR= ./$(PLATFORM)/$(DESIGN)/openscad
+LOCAL_SRC_DIR = ./$(PLATFORM)/$(DESIGN)/src
+
+# results folder
+DOCKER_RESULTS=
+LOCAL_RESULTS = 
+
+# docker configurations
+PNR_ROOT = /place_and_route/pnr
+PNR_MAKEFILE_LOCAL = ./$(PLATFORM)/$(DESIGN)/PnR_Makefile
+OR_MAKEFILE_LOCAL  = $(LOCAL_OR_DIR)/OR_Makefile
+DOCKER_OR_DIR  = $(PNR_ROOT)/openroad_flow/designs/$(PLATFORM)/$(DESIGN)
+DOCKER_SCAD_DIR= $(PNR_ROOT)/scad_flow/designs/$(PLATFORM)/$(DESIGN)
+DOCKER_OR_LOG  = $(PNR_ROOT)/openroad_flow/logs/$(DESIGN)
+
+#DOCKER_CONTAINER= reverent_mclean
+DOCKER_CONTAINER = intelligent_torvalds
+
+
+LOGS_DIR = ./$(PLATFORM)/$(DESIGN)/logs
+RESULTS_DIR= ./$(PLATFORM)/$(DESIGN)/results
+
+# Download configurations
+SCAD_DOWN_DIR = ./$(RESULTS_DIR)/scad
+
+# simulation config
+SIM_DIR = ~/Github/simulation/Continuous
+#SIM_FILES_DIR = $(SIM_DIR)/V2Va_Parser/testFiles/$(PLATFORM)/$(DESIGN)
+SIM_FILES_DIR = ./$(PLATFORM)/$(DESIGN)/src
+SIM_ARGS= --verilog_file $(DESIGN).v --path $(SIM_FILES_DIR) --design $(DESIGN) --lengths_file $(SCAD_DOWN_DIR)/base/$(DESIGN)_lengths.xlsx
+
+
+
+# the template directory contains all of the nessary instructions
+# Also verifies the Verilog file exists
+TEMPLATE_DIR = ./$(PLATFORM)/template
+
+#make_src_from_mfda:
+	
+
+
+
+# Check if docker is running
+run_docker:
+	docker run --rm -ti $(DOCKER_CONTAINER) bash -c 'source $(PNR_ROOT)/setup_env.sh'
+
+# Upload design -------------------------------------------------------------------------------
+upload_src:
+	echo "Upload SRC Verilog"
+	docker exec $(DOCKER_CONTAINER) mkdir -p $(PNR_ROOT)/openroad_flow/designs/src/$(DESIGN)/
+	docker cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v $(DOCKER_CONTAINER):$(PNR_ROOT)/openroad_flow/designs/src/$(DESIGN)/$(DESIGN).v
+	
+upload_make_2_docker:
+
+	rm -f $(PNR_MAKEFILE_LOCAL)
+	rm -f $(OR_MAKEFILE_LOCAL)
+
+	# create makefile for PnR
+	touch $(PNR_MAKEFILE_LOCAL)
+	echo "# Design platform and name to explore" >> $(PNR_MAKEFILE_LOCAL)
+	echo "PLATFORM = $(PLATFORM)" >> $(PNR_MAKEFILE_LOCAL)
+	echo "DESIGN = $(DESIGN)" >> $(PNR_MAKEFILE_LOCAL)
+	cat PnR_Makefile >> $(PNR_MAKEFILE_LOCAL)
+	
+	# create makefile for Openroad
+	touch $(OR_MAKEFILE_LOCAL)
+	echo "DESIGN_CONFIG = ./designs/$(PLATFORM)/$(DESIGN)/config.mk" >> $(OR_MAKEFILE_LOCAL)
+	cat OR_Makefile >> $(OR_MAKEFILE_LOCAL)
+	
+	# upload makefiles
+	docker cp $(PNR_MAKEFILE_LOCAL) $(DOCKER_CONTAINER):$(PNR_ROOT)/Makefile
+	docker cp $(OR_MAKEFILE_LOCAL) $(DOCKER_CONTAINER):$(PNR_ROOT)/openroad_flow/Makefile
+
+
+upload_pnr: $(LOCAL_OR_DIR)/config.mk $(LOCAL_OR_DIR)/constraint.sdc $(LOCAL_OR_DIR)/io_constraints.tcl $(LOCAL_OR_DIR)/global_place_args.tcl
+	docker exec $(DOCKER_CONTAINER) mkdir -p $(DOCKER_OR_DIR)
+	docker cp $(LOCAL_OR_DIR)/config.mk $(DOCKER_CONTAINER):$(DOCKER_OR_DIR)/config.mk
+	docker cp $(LOCAL_OR_DIR)/constraint.sdc $(DOCKER_CONTAINER):$(DOCKER_OR_DIR)/constraint.sdc
+	docker cp $(LOCAL_OR_DIR)/io_constraints.tcl $(DOCKER_CONTAINER):$(DOCKER_OR_DIR)/io_constraints.tcl
+	docker cp $(LOCAL_OR_DIR)/global_place_args.tcl $(DOCKER_CONTAINER):$(DOCKER_OR_DIR)/global_place_args.tcl
+	
+upload_scad: $(LOCAL_SCAD_DIR)/config.mk $(LOCAL_SCAD_DIR)/dimm.csv
+	docker exec $(DOCKER_CONTAINER) mkdir -p $(DOCKER_SCAD_DIR)
+	docker cp $(LOCAL_SCAD_DIR)/config.mk $(DOCKER_CONTAINER):$(DOCKER_SCAD_DIR)/config.mk
+	docker cp $(LOCAL_SCAD_DIR)/dimm.csv $(DOCKER_CONTAINER):$(DOCKER_SCAD_DIR)/dimm.csv
+	
+run_docker_pnr_make:
+	#docker exec -w $(PNR_ROOT) $(DOCKER_CONTAINER) tclsh $(DOCKER_OR_DIR)/global_place_args.tcl && $(MAKE)
+	docker exec -w $(PNR_ROOT) $(DOCKER_CONTAINER) $(MAKE)
+	#bash -c 'source $(PNR_ROOT)/setup_env.sh'# && $(MAKE)
+	
+	# cp logs
+	mkdir -p $(LOGS_DIR)
+	docker cp $(DOCKER_CONTAINER):$(DOCKER_OR_LOG)/base $(LOGS_DIR)
+
+download_scad:
+	#if [[ ! -e $(SCAD_DOWN_DIR) ]]; then
+	mkdir -p $(SCAD_DOWN_DIR)
+	#fi
+	docker cp $(DOCKER_CONTAINER):$(PNR_ROOT)/results/$(PLATFORM)/$(DESIGN)/base $(SCAD_DOWN_DIR)
+	
+	# remove bulk 
+	python3 ./removeBulk.py --infile $(SCAD_DOWN_DIR)/base/$(DESIGN).scad --platform $(PLATFORM) --design $(DESIGN)
+	
+	echo 0
+
+# Simulation ---------------------------------------------
+	
+copy_to_sim_dir:
+	mkdir -p $(SIM_FILES_DIR)
+	cp ./$(PLATFORM)/$(DESIGN)/mfdaSim/devices.csv $(SIM_FILES_DIR)/devices.csv
+	cp ./$(PLATFORM)/$(DESIGN)/mfdaSim/$(DESIGN)_spec.csv $(SIM_FILES_DIR)/$(DESIGN)_spec.csv
+	cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v $(SIM_FILES_DIR)/$(DESIGN).v
+	cp ./$(PLATFORM)/$(DESIGN)/src/scad/base/$(DESIGN)_lengths.xlsx $(SIM_FILES_DIR)/$(DESIGN)_lengths.xlsx
+	
+simulate_design: 
+	
+	#cd $(SIM_DIR)
+	python3 $(SIM_DIR)/simMain.py --preRoute False $(SIM_ARGS) 
+	
+	#mv $(LOCAL_SRC_DIR)/spiceFiles/* ./$(PLATFORM)/$(DESIGN)/spiceFiles
+	#rm $(LOCAL_SRC_DIR)/spiceFiles
+	
+simulate_preRoute:
+
+	#cp $(LOCAL_SRC_DIR)/
+
+	#SIM_ARGS_PREROUTE = --verilog_file $(DESIGN).v --path $(SIM_FILES_DIR) --design $(DESIGN) --lengths_file $(SCAD_DOWN_DIR)/base/$(DESIGN)_lengths.xlsx
+	mkdir -p $(LOCAL_SRC_DIR)/spiceFiles/preRoute
+	
+	python3 $(SIM_DIR)/simMain.py $(SIM_ARGS) --preRoute True
+	
+	mkdir -p ./$(PLATFORM)/$(DESIGN)/spiceFiles/
+	rm -f -r ./$(PLATFORM)/$(DESIGN)/spiceFiles/preRoute
+	
+	rsync -a $(LOCAL_SRC_DIR)/spiceFiles/preRoute ./$(PLATFORM)/$(DESIGN)/spiceFiles/preRoute
+
+sim_mv_files:
+	mv $(LOCAL_SRC_DIR)/spiceFiles/* ./$(PLATFORM)/$(DESIGN)/spiceFiles
+	
+
+# Clean ----------------------------------------------
+	
+clean_sim:
+	rm -r $(PLATFORM)/$(DESIGN)/spiceFiles
+	mkdir $(PLATFORM)/$(DESIGN)/spiceFiles
+	
+docker_clean:
+	docker exec -w $(PNR_ROOT) $(DOCKER_CONTAINER) $(MAKE) clean_all
+
+upload_files: upload_src upload_pnr upload_scad upload_make_2_docker
+pnr: upload_files run_docker_pnr_make download_scad
+
+redesign: pnr simulate_design
+
+all: pnr simulate_preRoute simulate_design
+clean_all: docker_clean clean_sim
+
