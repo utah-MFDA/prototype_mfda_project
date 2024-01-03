@@ -96,13 +96,13 @@ PNR_RESULTS_DIR= $(RESULTS_DIR)/pnr
 
 
 #SIM_DIR = ~/Github/simulation/Continuous
-SIM_DIR       = ./../../mfda_xyce/simulation
+SIM_DIR       = ./simulation
 #SIM_FILES_DIR = $(SIM_DIR)/V2Va_Parser/testFiles/$(PLATFORM)/$(DESIGN)
 SIM_FILES_DIR           = ./$(PLATFORM)/$(DESIGN)/src
 SIM_CIR_CONFIG          = $(SIM_DIR)/V2Va_Parser/VMF_xyce.mfsp
 
-SIM_PROJ_DIR  = ./$(PLATFORM)/$(DESIGN)/xyce
-SIM_FILE      = $(SIM_PROJ_DIR)/simulation.config
+#SIM_PROJ_DIR  = ./$(PLATFORM)/$(DESIGN)/xyce
+SIM_FILE      = $(LOCAL_SRC_DIR)/simulation.config
 
 SIM_RESULTS   = $(RESULTS_DIR)/xyce
 
@@ -189,7 +189,6 @@ upload_make_2_docker:
 
 
 upload_pnr: 
-	#$(LOCAL_OR_DIR)/config.mk $(LOCAL_OR_DIR)/constraint.sdc $(LOCAL_OR_DIR)/io_constraints.tcl $(LOCAL_OR_DIR)/global_place_args.tcl
 	mkdir -p $(LOCAL_OR_DIR)/$(PLATFORM)/$(DESIGN)
 	cp $(LOCAL_OR_DIR)/config.mk $(LOCAL_OR_DIR)/$(PLATFORM)/$(DESIGN)
 	cp $(LOCAL_OR_DIR)/constraint.sdc $(LOCAL_OR_DIR)/$(PLATFORM)/$(DESIGN)
@@ -197,20 +196,11 @@ upload_pnr:
 	cp $(LOCAL_OR_DIR)/global_place_args.tcl $(LOCAL_OR_DIR)/$(PLATFORM)/$(DESIGN)
 
 	docker cp $(LOCAL_OR_DIR)/$(PLATFORM) $(PNR_DOCKER_CONTAINER):$(PNR_ROOT)/openroad_flow/designs
-	#docker exec $(PNR_DOCKER_CONTAINER) mkdir -p $(DOCKER_OR_DIR)
-	#docker cp $(LOCAL_OR_DIR)/config.mk $(PNR_DOCKER_CONTAINER):$(DOCKER_OR_DIR)/config.mk
-	#docker cp $(LOCAL_OR_DIR)/constraint.sdc $(PNR_DOCKER_CONTAINER):$(DOCKER_OR_DIR)/constraint.sdc
-	#docker cp $(LOCAL_OR_DIR)/io_constraints.tcl $(PNR_DOCKER_CONTAINER):$(DOCKER_OR_DIR)/io_constraints.tcl
-	#docker cp $(LOCAL_OR_DIR)/global_place_args.tcl $(PNR_DOCKER_CONTAINER):$(DOCKER_OR_DIR)/global_place_args.tcl
 	
 upload_scad: $(LOCAL_SCAD_DIR)/config.mk $(LOCAL_SCAD_DIR)/dimm.csv
 	mkdir -p $(LOCAL_SCAD_DIR)/$(PLATFORM)/$(DESIGN)
 	cp $(LOCAL_SCAD_DIR)/config.mk $(LOCAL_SCAD_DIR)/$(PLATFORM)/$(DESIGN)
 	cp $(LOCAL_SCAD_DIR)/dimm.csv $(LOCAL_SCAD_DIR)/$(PLATFORM)/$(DESIGN)
-
-	#docker exec $(PNR_DOCKER_CONTAINER) mkdir -p $(DOCKER_SCAD_DIR)
-	#docker cp $(LOCAL_SCAD_DIR)/config.mk $(PNR_DOCKER_CONTAINER):$(DOCKER_SCAD_DIR)/config.mk
-	#docker cp $(LOCAL_SCAD_DIR)/dimm.csv $(PNR_DOCKER_CONTAINER):$(DOCKER_SCAD_DIR)/dimm.csv
 
 	docker cp $(LOCAL_SCAD_DIR)/$(PLATFORM) $(PNR_DOCKER_CONTAINER):$(PNR_ROOT)/scad_flow/designs
 
@@ -233,7 +223,6 @@ download_scad:
 	# remove bulk 
 	python3 ./removeBulk.py --infile $(SCAD_DOWN_DIR)/base/$(DESIGN).scad --platform $(PLATFORM) --design $(DESIGN)
 	
-	echo 0
 
 download_pnr_results:
 	
@@ -264,6 +253,7 @@ remove_bulk_scad:
 # Adjusted to work with the Xyce engine
 simulate_design: 
 	# copy netlist to xyce directory
+	mkdir -p ./$(PLATFORM)/$(DESIGN)/xyce
 	cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v ./$(PLATFORM)/$(DESIGN)/xyce/$(DESIGN).v
 	
 	python3 $(SIM_DIR)/runMFDASim.py --preRoute False $(SIM_ARGS) 
