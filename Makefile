@@ -63,7 +63,7 @@ LOCAL_RESULTS =
 
 ##### component library config ##########################################
 
-LIBRARY_BASE_DIR = ./../../component_library
+LIBRARY_BASE_DIR = ./h.r.3.3_pdk/components/
 LIBRARY_CSV      = $(LIBRARY_BASE_DIR)/StandardCellLibrary.csv
 
 # docker configurations
@@ -214,16 +214,11 @@ upload_scad: $(LOCAL_SCAD_DIR)/config.mk $(LOCAL_SCAD_DIR)/dimm.csv
 
 	docker cp $(LOCAL_SCAD_DIR)/$(PLATFORM) $(PNR_DOCKER_CONTAINER):$(PNR_ROOT)/scad_flow/designs
 
-run_docker_OR:
-	#docker exec -w $(PNR_ROOT)/openroad_flow $(PNR_DOCKER_CONTAINER) rm -f -r ./results/$(DESIGN)
-	docker exec -w $(PNR_ROOT)/openroad_flow $(PNR_DOCKER_CONTAINER) $(MAKE)
+# Run PnR Docker --------------------------------------------------------------------------------
 
 run_docker_pnr_make:
-	#docker exec -w $(PNR_ROOT) $(PNR_DOCKER_CONTAINER) tclsh $(DOCKER_OR_DIR)/global_place_args.tcl && $(MAKE)
-	#docker exec -w $(PNR_ROOT)/openroad_flow $(PNR_DOCKER_CONTAINER) rm -f -r ./results/$(DESIGN)
-	#docker exec -w $(PNR_ROOT) $(PNR_DOCKER_CONTAINER) $(MAKE)
+
 	docker start -a $(PNR_DOCKER_CONTAINER)
-	#bash -c 'source $(PNR_ROOT)/setup_env.sh'# && $(MAKE)
 	
 	# cp logs
 	mkdir -p $(LOGS_DIR)
@@ -246,6 +241,7 @@ download_pnr_results:
 	
 	docker cp $(PNR_DOCKER_CONTAINER):$(DOCKER_PNR_RESULT) $(PNR_RESULTS_DIR)
 
+# Alternative scad 
 local_scad:
 	echo $(LOCAL_SCAD_DIR)
 	mkdir -p $(SCAD_FLOW_LOCAL_DIR)/designs/$(PLATFORM)/$(DESIGN)
@@ -264,12 +260,6 @@ remove_bulk_scad:
 
 # Simulation ---------------------------------------------
 	
-copy_to_sim_dir:
-	mkdir -p $(SIM_FILES_DIR)
-	cp ./$(PLATFORM)/$(DESIGN)/mfdaSim/devices.csv $(SIM_FILES_DIR)/devices.csv
-	cp ./$(PLATFORM)/$(DESIGN)/mfdaSim/$(DESIGN)_spec.csv $(SIM_FILES_DIR)/$(DESIGN)_spec.csv
-	cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v $(SIM_FILES_DIR)/$(DESIGN).v
-	cp ./$(PLATFORM)/$(DESIGN)/src/scad/base/$(DESIGN)_lengths.xlsx $(SIM_FILES_DIR)/$(DESIGN)_lengths.xlsx
 
 # Adjusted to work with the Xyce engine
 simulate_design: 
@@ -285,6 +275,7 @@ simulate_design:
 	
 	#rm -rf ./$(PLATFORM)/$(DESIGN)/xyce/results/results
 
+# sync instructions
 DOCKER_LEF_DIR = /place_and_route/pnr/openroad_flow/platforms/$(PLATFORM)/lef
 sync_lef:
 	cd $(LIBRARY_BASE_DIR)/Components && make make_lef
