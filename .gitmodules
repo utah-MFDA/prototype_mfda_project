@@ -1,6 +1,3 @@
-[submodule "h.r.3.3_pdk"]
-	path = h.r.3.3_pdk
-	url = https://github.com/utah-MFDA/h.r.3.3_pdk
 [submodule "simulation"]
 	path = simulation
 	url = https://github.com/utah-MFDA/simulation
