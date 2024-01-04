@@ -63,7 +63,7 @@ LOCAL_RESULTS =
 
 ##### component library config ##########################################
 
-LIBRARY_BASE_DIR = ./h.r.3.3_pdk/components/
+LIBRARY_BASE_DIR = ./h.r.3.3_pdk/Components
 LIBRARY_CSV      = $(LIBRARY_BASE_DIR)/StandardCellLibrary.csv
 
 # docker configurations
@@ -101,8 +101,9 @@ SIM_DIR       = ./simulation
 SIM_FILES_DIR           = ./$(PLATFORM)/$(DESIGN)/src
 SIM_CIR_CONFIG          = $(SIM_DIR)/V2Va_Parser/VMF_xyce.mfsp
 
-#SIM_PROJ_DIR  = ./$(PLATFORM)/$(DESIGN)/xyce
+SIM_PROJ_DIR  = ./$(PLATFORM)/$(DESIGN)/xyce
 SIM_FILE      = $(LOCAL_SRC_DIR)/simulation.config
+SIM_EVAL_FILE = $(LOCAL_SRC_DIR)/eval.config
 
 SIM_RESULTS   = $(RESULTS_DIR)/xyce
 
@@ -255,6 +256,8 @@ simulate_design:
 	# copy netlist to xyce directory
 	mkdir -p ./$(PLATFORM)/$(DESIGN)/xyce
 	cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v ./$(PLATFORM)/$(DESIGN)/xyce/$(DESIGN).v
+	cp $(SIM_FILE) $(SIM_PROJ_DIR)
+	cp $(SIM_EVAL_FILE) $(SIM_PROJ_DIR)
 	
 	python3 $(SIM_DIR)/runMFDASim.py --preRoute False $(SIM_ARGS) 
 	# mv results directory
