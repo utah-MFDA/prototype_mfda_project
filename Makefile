@@ -107,7 +107,7 @@ SIM_EVAL_FILE = $(LOCAL_SRC_DIR)/eval.config
 
 SIM_RESULTS   = $(RESULTS_DIR)/xyce
 
-SIM_ARGS= --netlist $(DESIGN).v --sim_dir $(SIM_PROJ_DIR) --sim_file $(SIM_PROJ_DIR) --design $(DESIGN) --length_file $(SCAD_DOWN_DIR)/base/$(DESIGN)_lengths.xlsx --cir_config $(SIM_CIR_CONFIG) --docker_container $(SIM_DOCKER_CONTAINER) --lib $(LIBRARY_CSV)
+SIM_ARGS= --netlist $(DESIGN).v --sim_dir $(SIM_PROJ_DIR) --sim_file $(SIM_PROJ_DIR) --design $(DESIGN) --length_file $(SCAD_DOWN_DIR)/base/$(DESIGN)_lengths.xlsx --cir_config $(SIM_CIR_CONFIG) --docker_container $(SIM_DOCKER_CONTAINER) --lib $(LIBRARY_CSV) --eval_file eval.config
 
 
 
