@@ -10,27 +10,10 @@ PLATFORM ?= mfda_30px_m
 #PLATFORM ?= mfda_30px
 
 ##### mfda_30px ## devices
-#DESIGN   ?= PCR1_V2
-#DESIGN   ?= PCR1_V2_opt
-#DESIGN   ?= valve_test_01
-#DESIGN   ?= smart_toilet_2_1
-#DESIGN   ?= smart_toilet_t
-#DESIGN   ?= smart_toilet_t_opt
-#DESIGN   ?= smart_toilet_t2
-#DESIGN   ?= smart_toilet_t_mod1
-#DESIGN   ?= smart_toilet_t_mod2
-#DESIGN   ?= smart_toilet_t_mod3
-#DESIGN   ?= smart_toilet_t_mod3_opt_2
-
-#DESIGN   ?= three_port_test1
-#DESIGN   ?= three_port_test2
-
 #DESIGN   ?= simple_two_mix
 
 ##### mfda_30px_m ## devices
-#DESIGN ?= serp_100_200_test
-#DESIGN ?= smart_t_multiplex
-#DESIGN ?= valve_test
+
 DESIGN ?= PCR_MIXER_1
 
 LOCAL_OR_DIR  = ./$(PLATFORM)/$(DESIGN)/openroad
