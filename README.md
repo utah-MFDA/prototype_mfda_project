@@ -23,7 +23,7 @@ To edit the design you will need to edit the following
     - This file contains the hardware information such as pumps used with pressures and flow rates. Additionally, the input chemical concentrations will be added here.
 
     openroad/io_contraints.tcl
-    - This specifies the location of the pins that will match to the interface chip. You will need to uncomment the pins that will be used for the chip desired. Then replace the variable after -pin_name with the pin assigned in the verilog netlist file.
+    - This specifies the location of the pins that will match to the interface chip. You will need to uncomment the pins that will be used for the chip desired. Then replace the variable after -pin_name with the port to be assigned in the verilog netlist file.
 
 
 Files that can be optionally edited:
