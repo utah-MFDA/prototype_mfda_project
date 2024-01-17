@@ -5,7 +5,12 @@ SHELL		= /bin/bash
 # Default target when invoking without specific target
 .DEFAULT_GOAL := all
 
-# Design platform and name to explorew
+
+#########################################
+### Design and platform configuration
+#########################################
+
+# Design platform and name to explore
 PLATFORM ?= mfda_30px_m
 #PLATFORM ?= mfda_30px
 
@@ -14,7 +19,22 @@ PLATFORM ?= mfda_30px_m
 
 ##### mfda_30px_m ## devices
 
-DESIGN ?= PCR_MIXER_1
+#DESIGN ?= PCR_MIXER_1
+DESIGN ?= smart_toilet
+
+
+#########################################
+### Docker container manual configuration
+#########################################
+
+
+SIM_DOCKER_CONTAINER = exciting_chatterjee
+
+
+
+#########################################
+#########################################
+#########################################
 
 LOCAL_OR_DIR  = ./$(PLATFORM)/$(DESIGN)/openroad
 LOCAL_SCAD_DIR= ./$(PLATFORM)/$(DESIGN)/openscad
@@ -38,7 +58,8 @@ SIM_DOCKER_IMAGE = bgoenner/mfda_xyce:latest
 
 ## SUSE
 PNR_DOCKER_CONTAINER = loving_blackburn
-SIM_DOCKER_CONTAINER = gifted_colden
+#SIM_DOCKER_CONTAINER = gifted_colden
+#SIM_DOCKER_CONTAINER = exciting_chatterjee
 
 # results folder
 DOCKER_RESULTS=
@@ -298,6 +319,24 @@ mk_from_template:
 	else \
 		echo TEMP_DESIGN not defined; \
 	fi;
+
+# initialize repo
+
+init: init_pull_images build_library create_sim_docker
+	docker ps
+
+init_pull_images:
+	docker pull $(SIM_DOCKER_IMAGE)
+	docker pull $(PNR_DOCKER_IMAGE)
+
+
+build_library:
+	cd $(LIBRARY_BASE_DIR) && make check_library
+	cd $(LIBRARY_BASE_DIR) && make make_va_remote
+	cd $(LIBRARY_BASE_DIR) && make build_scad_local
+	cd $(LIBRARY_BASE_DIR) && make make_lef
+
+	echo "Build library complete"
 
 # Clean ----------------------------------------------
 	
