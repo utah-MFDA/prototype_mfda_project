@@ -21,45 +21,41 @@ make mk_from_template TEMP_DESIGN=<your_new_design>
 This will generate a new design from the template directory using the variable, PLATFORM, in the Makefile. You will also need to change the DESIGN variable in the Makefile to match the design to be compiled when running the code.
 
 make sure the necessary python libraries are installed including:
-Pandas
-docker
-matplotlib
+ - Pandas
+ - docker
+ - matplotlib
 
 
 Additionally run 
-'''
+```
 make init
-'''
+```
 to pull the necessary docker containers and to build the library
 
 
 
-To edit the design you will need to edit the following
-    src/<your_design>.v
-    - This file contains the netlist information of the component and there connections. The components are listed in the <platform>_pdk directory.
+To edit the design you will need to edit the following:    
 
-    src/simulation.config
-    - This file contains the hardware information such as pumps used with pressures and flow rates. Additionally, the input chemical concentrations will be added here.
+ - src/<your_design>.v : This file contains the netlist information of the component and there connections. The components are listed in the <platform>_pdk directory.
 
-    openroad/io_contraints.tcl
-    - This specifies the location of the pins that will match to the interface chip. You will need to uncomment the pins that will be used for the chip desired. Then replace the variable after -pin_name with the port to be assigned in the verilog netlist file.
+
+ - src/simulation.config : This file contains the hardware information such as pumps used with pressures and flow rates. Additionally, the input chemical concentrations will be added here.
+
+    
+ - openroad/io_contraints.tcl : This specifies the location of the pins that will match to the interface chip. You will need to uncomment the pins that will be used for the chip desired. Then replace the variable after -pin_name with the port to be assigned in the verilog netlist file.
 
 
 Files that can be optionally edited:
-    src/eval.config
-    - This file describes the evaluations to make, currently only supports chemical evaluations
     
-    openroad/config.mk
-    - describes the core and die area, not nessary to change.
+ - src/eval.config : This file describes the evaluations to make, currently only supports chemical evaluations
+   
+ - openroad/config.mk : describes the core and die area, not nessary to change.
     
-    openroad/global_place_args.tcl
-    - variables use by the global placer RePlAce
+ - openroad/global_place_args.tcl : variables use by the global placer RePlAce   
 
-    openscad/config.mk
-    - configurations used for building the scad model 
+ - openscad/config.mk : configurations used for building the scad model 
 
-    openscad/dimm.csv
-    - a wire by wire dimensional edit, can only be done for the whole wirelength
+ - openscad/dimm.csv : a wire by wire dimensional edit, can only be done for the whole wirelength
 
 ### Runng the code
 
