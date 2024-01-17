@@ -9,13 +9,18 @@ Docker
 
 ## Getting started
 
+Make sure all submodules are pulled as well by running
+```
+git submodule update --init --recursive
+```
+
 A new template design can be generated simply by
 ```
 make mk_from_template TEMP_DESIGN=<your_new_design>
 ```
 This will generate a new design from the template directory using the variable, PLATFORM, in the Makefile. You will also need to change the DESIGN variable in the Makefile to match the design to be compiled when running the code.
 
-make sure the necessary python libraries are installed including
+make sure the necessary python libraries are installed including:
 Pandas
 docker
 matplotlib
