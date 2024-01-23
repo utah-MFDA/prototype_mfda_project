@@ -1,4 +1,4 @@
-# Microfluidic Design Automation Toolchain
+# Microfluidic Design Automation Prototype Toolchain
 
 The purpose of this tool is generate a microfluidic chip from a set of open-source electronics design automation (EDA) tools and generate a SCAD output for 3D printing. This tool has been developed to be easily transportable using Docker containers to run the required software for the place and route module as well as the simulation software.
 
