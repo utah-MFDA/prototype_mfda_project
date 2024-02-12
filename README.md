@@ -55,7 +55,7 @@ Files that can be optionally edited:
 
  - openscad/config.mk : configurations used for building the scad model 
 
- - openscad/dimm.csv : a wire by wire dimensional edit, can only be done for the whole wirelength
+ - openscad/dimm.csv : a wire by wire dimensional edit, can only be done for the whole wirelength. This is an experimental feature currently. It is suggested to use the current defaults for channel sizes at the moment.
 
 ### Runng the code
 
