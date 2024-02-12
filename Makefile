@@ -21,6 +21,7 @@ PLATFORM ?= mfda_30px_m
 
 #DESIGN ?= PCR_MIXER_1
 DESIGN ?= smart_toilet
+#DESIGN ?= smart_toilet_V2
 
 
 #########################################
@@ -28,7 +29,8 @@ DESIGN ?= smart_toilet
 #########################################
 
 
-SIM_DOCKER_CONTAINER = exciting_chatterjee
+SIM_DOCKER_CONTAINER = priceless_pare
+#SIM_DOCKER_CONTAINER = exciting_chatterjee
 
 
 
@@ -46,7 +48,7 @@ LOCAL_SRC_DIR = ./$(PLATFORM)/$(DESIGN)/src
 
 
 PNR_DOCKER_IMAGE = bgoenner/mfda_pnr_cp:latest
-SIM_DOCKER_IMAGE = bgoenner/mfda_xyce:latest
+SIM_DOCKER_IMAGE = bgoenner/mfda_xyce:2.0.3
 
 ####### WINDOWS container ###############
 
@@ -164,7 +166,7 @@ run_sim_docker:
 upload_src:
 	echo "Upload SRC Verilog"
 	#docker exec $(PNR_DOCKER_CONTAINER) mkdir -p $(PNR_ROOT)/openroad_flow/designs/src/$(DESIGN)/
-	mkdir ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN)
+	mkdir -p ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN)
 	cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN).v ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN)/$(DESIGN).v
 	docker cp ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN) $(PNR_DOCKER_CONTAINER):$(PNR_ROOT)/openroad_flow/designs/src/
 	rm -r ./$(PLATFORM)/$(DESIGN)/src/$(DESIGN)
@@ -337,6 +339,19 @@ build_library:
 	cd $(LIBRARY_BASE_DIR) && make make_lef
 
 	echo "Build library complete"
+
+# Xyce rebuild
+
+PDK_LOC 			= /mfda_simulation/h.r.3.3_pdk
+#XYCE_DOCKER_LIB_LOC = /mfda_simulation/h.r.3.3_pdk/Components
+
+refresh_docker_lib:
+	docker exec -w (PDK_LOC) $(SIM_DOCKER_CONTAINER) git pull
+
+rebuild_xyce_lib:
+	docker exec -w (PDK_LOC)/Components $(SIM_DOCKER_CONTAINER) make make_va_default
+
+update_xyce_docker: refresh_docker_lib rebuild_xyce_lib
 
 # Clean ----------------------------------------------
 	

@@ -31,4 +31,4 @@ Using 1u default distance from corners.
 [INFO PPL-0006] Slots increase factor    0.01
 [INFO PPL-0008] Successfully assigned pins to sections.
 [INFO PPL-0012] I/O nets HPWL: 0.00 um.
-Elapsed time: 0:00.11[h:]min:sec. Average CPU: 99%. Peak memory: 81048KB.
+Elapsed time: 0:00.10[h:]min:sec. Average CPU: 99%. Peak memory: 81048KB.

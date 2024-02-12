@@ -118,7 +118,7 @@ Number of nets:           19
 #macroValidViaAp       = 0
 #macroNoAp             = 0
 [INFO DRT-0166] Complete pin access.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 81.60 (MB), peak = 81.60 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 127.34 (MB), peak = 127.34 (MB)
 [INFO DRT-0151] Reading guide.
 
 Number of guides:     96
@@ -2352,9 +2352,9 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 [INFO DRT-0186] Done with 24 vertical wires in 1 frboxes and 10 horizontal wires in 1 frboxes.
 [INFO DRT-0182] Complete track assignment.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 82.10 (MB), peak = 82.10 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 120.10 (MB), peak = 127.84 (MB)
 [INFO DRT-0187] Start routing data preparation.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 82.22 (MB), peak = 82.22 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 120.22 (MB), peak = 127.84 (MB)
 [INFO DRT-0194] Start detail routing.
 [INFO DRT-0195] Start 0th optimization iteration.
 Warning: no min spacing rule
@@ -5149,9 +5149,9 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 83.56 (MB).
+    elapsed time = 00:00:00, memory = 121.68 (MB).
 [INFO DRT-0199]   Number of violations = 4.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 595.80 (MB), peak = 637.72 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 633.98 (MB), peak = 675.95 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2696 um.
@@ -7649,9 +7649,9 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
     Completing 10% with 4 violations.
-    elapsed time = 00:00:00, memory = 597.80 (MB).
+    elapsed time = 00:00:00, memory = 635.98 (MB).
 [INFO DRT-0199]   Number of violations = 1.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 640.75 (MB), peak = 640.75 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.89 (MB), peak = 678.89 (MB)
 Total wire length = 8877 um.
 Total wire length on LAYER met1 = 2820 um.
 Total wire length on LAYER met2 = 2696 um.
@@ -7683,9 +7683,9 @@ Up-via summary (total 118):.
 
 [INFO DRT-0195] Start 2nd optimization iteration.
     Completing 10% with 1 violations.
-    elapsed time = 00:00:00, memory = 640.75 (MB).
+    elapsed time = 00:00:00, memory = 678.89 (MB).
     Completing 20% with 1 violations.
-    elapsed time = 00:00:00, memory = 640.75 (MB).
+    elapsed time = 00:00:00, memory = 678.89 (MB).
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -8631,11 +8631,11 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
     Completing 30% with 1 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8667,11 +8667,11 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 17th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8703,11 +8703,11 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 25th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8739,15 +8739,15 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 33rd optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8779,19 +8779,19 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 41st optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 50% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 60% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8823,11 +8823,11 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 49th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8859,15 +8859,15 @@ Up-via summary (total 112):.
 
 [INFO DRT-0195] Start 57th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 642.12 (MB).
+    elapsed time = 00:00:00, memory = 680.26 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 Total wire length = 8876 um.
 Total wire length on LAYER met1 = 2790 um.
 Total wire length on LAYER met2 = 2756 um.
@@ -8927,7 +8927,7 @@ Up-via summary (total 112):.
                    112
 
 
-[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 642.12 (MB), peak = 642.12 (MB)
+[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
 
 [INFO DRT-0180] Post processing.
 [INFO GRT-0240] Net out detailed route wire length: 359.77um
@@ -9001,4 +9001,4 @@ Up-via summary (total 112):.
 [INFO GRT-0240] Net connect6 detailed route wire length: 329.73um
 	Layer met1 :  0.28um
 	Layer met2 : 329.45um
-Elapsed time: 0:00.88[h:]min:sec. Average CPU: 342%. Peak memory: 658304KB.
+Elapsed time: 0:00.88[h:]min:sec. Average CPU: 318%. Peak memory: 697228KB.

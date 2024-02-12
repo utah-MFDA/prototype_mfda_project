@@ -88,4 +88,4 @@ check_antennas
 [INFO ANT-0002] Found 0 net violations in 19 nets.
 [WARNING FLW-0006] No clocks found.
 [INFO FLW-0011] Path endpoint count 19
-Elapsed time: 0:00.12[h:]min:sec. Average CPU: 99%. Peak memory: 162032KB.
+Elapsed time: 0:00.14[h:]min:sec. Average CPU: 99%. Peak memory: 161776KB.
