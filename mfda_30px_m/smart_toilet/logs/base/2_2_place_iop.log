@@ -6,9 +6,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0224]     Created 9 technology vias
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m.tlef
 [INFO ODB-0222] Reading LEF file: ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
-[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 440.
+[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 478.
 
-[INFO ODB-0225]     Created 13 library cells
+[INFO ODB-0225]     Created 14 library cells
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
 [INFO ODB-0127] Reading DEF file: ./results/smart_toilet/base/2_1_place_gp.def
 [INFO ODB-0128] Design: smart_toilet
@@ -31,4 +31,4 @@ Using 1u default distance from corners.
 [INFO PPL-0006] Slots increase factor    0.01
 [INFO PPL-0008] Successfully assigned pins to sections.
 [INFO PPL-0012] I/O nets HPWL: 0.00 um.
-Elapsed time: 0:00.10[h:]min:sec. Average CPU: 99%. Peak memory: 81048KB.
+Elapsed time: 0:00.11[h:]min:sec. Average CPU: 99%. Peak memory: 81260KB.

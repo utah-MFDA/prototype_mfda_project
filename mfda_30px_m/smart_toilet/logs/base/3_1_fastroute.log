@@ -6,9 +6,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0224]     Created 9 technology vias
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m.tlef
 [INFO ODB-0222] Reading LEF file: ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
-[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 440.
+[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 478.
 
-[INFO ODB-0225]     Created 13 library cells
+[INFO ODB-0225]     Created 14 library cells
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
 [INFO ODB-0127] Reading DEF file: ./results/smart_toilet/base/2_place.def
 [INFO ODB-0128] Design: smart_toilet
@@ -34,7 +34,7 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO GRT-0001] Minimum degree: 2
 [INFO GRT-0002] Maximum degree: 2
 [INFO GRT-0003] Macros: 0
-[INFO GRT-0004] Blockages: 36
+[INFO GRT-0004] Blockages: 42
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
@@ -44,8 +44,8 @@ met1       Horizontal        225           199          11.56%
 met2       Vertical          225            70          68.89%
 met3       Horizontal        225           152          32.44%
 met4       Vertical          225            71          68.44%
-met5       Horizontal        225           208          7.56%
-met6       Vertical          225           170          24.44%
+met5       Horizontal        225           180          20.00%
+met6       Vertical          225           134          40.44%
 met7       Horizontal        225           208          7.56%
 met8       Vertical          225           170          24.44%
 met9       Horizontal        225           208          7.56%
@@ -64,13 +64,13 @@ met1               199            15            7.54%             0 /  0 /  0
 met2                70             6            8.57%             0 /  0 /  0
 met3               152             0            0.00%             0 /  0 /  0
 met4                71             0            0.00%             0 /  0 /  0
-met5               208             0            0.00%             0 /  0 /  0
-met6               170             0            0.00%             0 /  0 /  0
+met5               180             0            0.00%             0 /  0 /  0
+met6               134             0            0.00%             0 /  0 /  0
 met7               208             0            0.00%             0 /  0 /  0
 met8               170             0            0.00%             0 /  0 /  0
 met9               208             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total             1456            21            1.44%             0 /  0 /  0
+Total             1392            21            1.51%             0 /  0 /  0
 
 [INFO GRT-0018] Total wirelength: 22500 um
 [INFO GRT-0014] Routed nets: 19
@@ -88,4 +88,4 @@ check_antennas
 [INFO ANT-0002] Found 0 net violations in 19 nets.
 [WARNING FLW-0006] No clocks found.
 [INFO FLW-0011] Path endpoint count 19
-Elapsed time: 0:00.14[h:]min:sec. Average CPU: 99%. Peak memory: 161776KB.
+Elapsed time: 0:00.12[h:]min:sec. Average CPU: 99%. Peak memory: 161864KB.

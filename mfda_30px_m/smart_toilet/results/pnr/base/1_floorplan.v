@@ -39,13 +39,13 @@ module smart_toilet (out,
     .out_fluid(connect1));
  serpentine_300px_2 serp4 (.in_fluid(soln3),
     .out_fluid(connect3));
- serpentine_300px_2 serp6 (.in_fluid(connect3),
+ serpentine_300px_4 serp6 (.in_fluid(connect3),
     .out_fluid(connect31));
  serpentine_300px_2 serp6_1 (.in_fluid(connect31),
     .out_fluid(connect32));
  serpentine_300px_2 serp6_10 (.in_fluid(connect37),
     .out_fluid(connect5));
- serpentine_300px_2 serp6_2 (.in_fluid(connect32),
+ serpentine_300px_4 serp6_2 (.in_fluid(connect32),
     .out_fluid(connect33));
  serpentine_300px_2 serp6_3 (.in_fluid(connect33),
     .out_fluid(connect34));
@@ -53,7 +53,7 @@ module smart_toilet (out,
     .out_fluid(connect35));
  serpentine_300px_2 serp6_5 (.in_fluid(connect35),
     .out_fluid(connect36));
- serpentine_300px_2 serp6_6 (.in_fluid(connect36),
+ serpentine_300px_4 serp6_6 (.in_fluid(connect36),
     .out_fluid(connect37));
  serpentine_200px_0 serp7 (.in_fluid(connect6),
     .out_fluid(out));
