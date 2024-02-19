@@ -1,0 +1,25 @@
+[INFO] Reporting cells prior to loading DEF ...
+[INFO] Reading DEF ...
+[INFO] Clearing cells...
+[INFO] ... preserving 'VIA_M1M2_PR'
+[INFO] ... preserving 'VIA_M2M3_PR'
+[INFO] ... preserving 'VIA_M3M4_PR'
+[INFO] ... preserving 'VIA_M4M5_PR'
+[INFO] ... preserving 'VIA_M5M6_PR'
+[INFO] ... preserving 'VIA_M6M7_PR'
+[INFO] ... preserving 'VIA_M7M8_PR'
+[INFO] ... preserving 'VIA_M8M9_PR'
+[INFO] ... preserving 'VIA_M9M10_PR'
+[INFO] Merging GDS/OAS files...
+	./platforms/mfda_30px_m/gds/mfda_30px.gds
+[INFO] Copying toplevel cell 'smart_toilet_r'
+WARNING: no fill config file specified
+[INFO] Checking for missing cell from GDS/OAS...
+[ERROR] LEF Cell 'serpentine_200px_0' has no matching GDS/OAS cell. Cell will be empty
+[ERROR] LEF Cell 'serpentine_300px_2' has no matching GDS/OAS cell. Cell will be empty
+[ERROR] LEF Cell 'serpentine_300px_4' has no matching GDS/OAS cell. Cell will be empty
+[ERROR] LEF Cell 'diffmix_25px_0' has no matching GDS/OAS cell. Cell will be empty
+[INFO] Checking for orphan cell in the final layout...
+[INFO] No orphan cells
+[INFO] Writing out GDS/OAS 'results/smart_toilet_r/base/4_1_merged.gds'
+Elapsed time: 0:00.72[h:]min:sec. Average CPU: 100%. Peak memory: 313456KB.

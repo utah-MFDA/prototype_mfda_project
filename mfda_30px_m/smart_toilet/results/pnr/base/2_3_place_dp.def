@@ -87,14 +87,14 @@ COMPONENTS 16 ;
     - serp1_2 serpentine_200px_0 + PLACED ( 1500000 1290000 ) FS ;
     - serp2 serpentine_200px_0 + PLACED ( 1800000 1230000 ) S ;
     - serp4 serpentine_300px_2 + PLACED ( 0 690000 ) S ;
-    - serp6 serpentine_300px_2 + PLACED ( 450000 810000 ) FS ;
+    - serp6 serpentine_300px_4 + PLACED ( 450000 810000 ) FS ;
     - serp6_1 serpentine_300px_2 + PLACED ( 900000 840000 ) N ;
     - serp6_10 serpentine_300px_2 + PLACED ( 2070000 780000 ) FN ;
-    - serp6_2 serpentine_300px_2 + PLACED ( 540000 300000 ) FN ;
+    - serp6_2 serpentine_300px_4 + PLACED ( 540000 300000 ) FN ;
     - serp6_3 serpentine_300px_2 + PLACED ( 990000 90000 ) FS ;
     - serp6_4 serpentine_300px_2 + PLACED ( 1440000 90000 ) FS ;
     - serp6_5 serpentine_300px_2 + PLACED ( 1890000 150000 ) FS ;
-    - serp6_6 serpentine_300px_2 + PLACED ( 1620000 600000 ) FN ;
+    - serp6_6 serpentine_300px_4 + PLACED ( 1620000 600000 ) FN ;
     - serp7 serpentine_200px_0 + PLACED ( 1290000 540000 ) FN ;
 END COMPONENTS
 PINS 4 ;

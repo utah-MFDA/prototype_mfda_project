@@ -1,0 +1,51 @@
+* Converted from verilog for microfluidic simulation
+
+YPressurePump soln1 soln1_0 soln1_0c  pressure=100k 
+Ychannel soln1_channel soln1_0 soln1_1 soln1_0c soln1_1c length=8.016000000000002m
+
+YPressurePump soln2 soln2_0 soln2_0c  pressure=100k chemConcentration=100m 
+Ychannel soln2_channel soln2_0 soln2_1 soln2_0c soln2_1c length=6.648000000000001m
+
+YPressurePump soln3 soln3_0 soln3_0c  pressure=100k 
+Ychannel soln3_channel soln3_0 soln3_1 soln3_0c soln3_1c length=9.412m
+
+
+Ychannel output0 out_ch 0 out_chC outc0 length=5.736000000000002m
+Ychannel connect01 connect01_0 connect01_1 connect01_0c connect01_1c length=0.8560000000000001m
+Ychannel connect02 connect02_0 connect02_1 connect02_0c connect02_1c length=3.136000000000001m
+Ychannel connect0 connect0_0 connect0_1 connect0_0c connect0_1c length=2.908000000000001m
+Ychannel connect1 connect1_0 connect1_1 connect1_0c connect1_1c length=6.500000000000001m
+Ychannel connect2 connect2_0 connect2_1 connect2_0c connect2_1c length=0.684m
+Ychannel connect3 connect3_0 connect3_1 connect3_0c connect3_1c length=5.132000000000001m
+Ychannel connect5 connect5_0 connect5_1 connect5_0c connect5_1c length=4.932m
+Ychannel connect6 connect6_0 connect6_1 connect6_0c connect6_1c length=2.908m
+Ychannel connect31 connect31_0 connect31_1 connect31_0c connect31_1c length=3.764000000000001m
+Ychannel connect32 connect32_0 connect32_1 connect32_0c connect32_1c length=7.640000000000001m
+Ychannel connect33 connect33_0 connect33_1 connect33_0c connect33_1c length=6.216000000000001m
+Ychannel connect34 connect34_0 connect34_1 connect34_0c connect34_1c length=0.8560000000000001m
+Ychannel connect35 connect35_0 connect35_1 connect35_0c connect35_1c length=1.312m
+Ychannel connect36 connect36_0 connect36_1 connect36_0c connect36_1c length=3.536000000000001m
+Ychannel connect37 connect37_0 connect37_1 connect37_0c connect37_1c length=9.407999999999996m
+Yserpentine_200px_0 serp1 soln2_1 connect0_0 soln2_1c connect0_0c 
+Yserpentine_200px_0 serp1_1 connect0_1 connect01_0 connect0_1c connect01_0c 
+Yserpentine_200px_0 serp1_2 connect01_1 connect02_0 connect01_1c connect02_0c 
+Yserpentine_200px_0 serp2 connect02_1 connect1_0 connect02_1c connect1_0c 
+Ydiffmix_25px_0 mix0 soln1_1 connect1_1 connect2_0 soln1_1c connect1_1c connect2_0c 
+Yserpentine_300px_2 serp4 soln3_1 connect3_0 soln3_1c connect3_0c 
+Yserpentine_300px_4 serp6 connect3_1 connect31_0 connect3_1c connect31_0c 
+Yserpentine_300px_2 serp6_1 connect31_1 connect32_0 connect31_1c connect32_0c 
+Yserpentine_300px_4 serp6_2 connect32_1 connect33_0 connect32_1c connect33_0c 
+Yserpentine_300px_2 serp6_3 connect33_1 connect34_0 connect33_1c connect34_0c 
+Yserpentine_300px_2 serp6_4 connect34_1 connect35_0 connect34_1c connect35_0c 
+Yserpentine_300px_2 serp6_5 connect35_1 connect36_0 connect35_1c connect36_0c 
+Yserpentine_300px_4 serp6_6 connect36_1 connect37_0 connect36_1c connect37_0c 
+Yserpentine_300px_2 serp6_10 connect37_1 connect5_0 connect37_1c connect5_0c 
+Ydiffmix_25px_0 mix1 connect2_1 connect5_1 connect6_0 connect2_1c connect5_1c connect6_0c 
+Yserpentine_200px_0 serp7 connect6_1 out_ch connect6_1c out_chC 
+
+
+.tran 0.1m 1m
+.print tran V(out_chC)
+.end
+
+*.tran 0.1ms 1ms

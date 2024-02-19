@@ -1,0 +1,19 @@
+OpenROAD v2.0-3008-g7120a6361 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: ./platforms/mfda_30px_m/lef/mfda_30px_m.tlef
+[INFO ODB-0223]     Created 19 technology layers
+[INFO ODB-0224]     Created 9 technology vias
+[INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m.tlef
+[INFO ODB-0222] Reading LEF file: ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 478.
+
+[INFO ODB-0225]     Created 14 library cells
+[INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
+[WARNING ORD-1011] LEF master diffmix_25px_0 has no liberty cell.
+[WARNING ORD-1011] LEF master serpentine_200px_0 has no liberty cell.
+[WARNING ORD-1011] LEF master serpentine_300px_2 has no liberty cell.
+[WARNING ORD-1011] LEF master serpentine_300px_4 has no liberty cell.
+number instances in verilog is 16
+[INFO IFP-0001] Added 53 rows of 85 sites.
+Elapsed time: 0:00.10[h:]min:sec. Average CPU: 100%. Peak memory: 82436KB.

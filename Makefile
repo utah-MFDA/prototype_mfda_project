@@ -21,6 +21,7 @@ PLATFORM ?= mfda_30px_m
 
 #DESIGN ?= PCR_MIXER_1
 DESIGN ?= smart_toilet
+#DESIGN ?= smart_toilet_r
 #DESIGN ?= smart_toilet_V2
 
 
@@ -346,12 +347,24 @@ PDK_LOC 			= /mfda_simulation/h.r.3.3_pdk
 #XYCE_DOCKER_LIB_LOC = /mfda_simulation/h.r.3.3_pdk/Components
 
 refresh_docker_lib:
-	docker exec -w (PDK_LOC) $(SIM_DOCKER_CONTAINER) git pull
+	docker exec -w $(PDK_LOC) $(SIM_DOCKER_CONTAINER) git stash
+	docker exec -w $(PDK_LOC) $(SIM_DOCKER_CONTAINER) git pull
+
 
 rebuild_xyce_lib:
-	docker exec -w (PDK_LOC)/Components $(SIM_DOCKER_CONTAINER) make make_va_default
+	docker exec -w $(PDK_LOC)/Components $(SIM_DOCKER_CONTAINER) make make_va_default
 
 update_xyce_docker: refresh_docker_lib rebuild_xyce_lib
+
+# Upload LEF merge
+
+DOCKER_LEF_PATH = /place_and_route/pnr/openroad_flow/platforms/$(PLATFORM)/lef
+
+upload_lef_merge:
+	docker cp $(LIBRARY_BASE_DIR)/HR3.3_merged.lef $(PNR_DOCKER_CONTAINER):$(DOCKER_LEF_PATH)/$(PLATFORM)_merged.lef
+
+merge_lef:
+	cd $(LIBRARY_BASE_DIR) && make make_lef
 
 # Clean ----------------------------------------------
 	

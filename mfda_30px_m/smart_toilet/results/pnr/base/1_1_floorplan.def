@@ -85,14 +85,14 @@ COMPONENTS 16 ;
     - serp1_2 serpentine_200px_0 ;
     - serp2 serpentine_200px_0 ;
     - serp4 serpentine_300px_2 ;
-    - serp6 serpentine_300px_2 ;
+    - serp6 serpentine_300px_4 ;
     - serp6_1 serpentine_300px_2 ;
     - serp6_10 serpentine_300px_2 ;
-    - serp6_2 serpentine_300px_2 ;
+    - serp6_2 serpentine_300px_4 ;
     - serp6_3 serpentine_300px_2 ;
     - serp6_4 serpentine_300px_2 ;
     - serp6_5 serpentine_300px_2 ;
-    - serp6_6 serpentine_300px_2 ;
+    - serp6_6 serpentine_300px_4 ;
     - serp7 serpentine_200px_0 ;
 END COMPONENTS
 PINS 4 ;

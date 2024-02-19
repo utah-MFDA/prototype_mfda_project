@@ -6,9 +6,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0224]     Created 9 technology vias
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m.tlef
 [INFO ODB-0222] Reading LEF file: ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
-[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 440.
+[WARNING ODB-0220] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef at line 478.
 
-[INFO ODB-0225]     Created 13 library cells
+[INFO ODB-0225]     Created 14 library cells
 [INFO ODB-0226] Finished LEF file:  ./platforms/mfda_30px_m/lef/mfda_30px_m_merged.lef
 [INFO ODB-0127] Reading DEF file: ./results/smart_toilet/base/2_place.def
 [INFO ODB-0128] Design: smart_toilet
@@ -21,7 +21,7 @@ Components of this program may be licensed under more restrictive licenses which
 
 Units:                1000
 Number of layers:     21
-Number of macros:     13
+Number of macros:     14
 Number of vias:       9
 Number of viarulegen: 0
 
@@ -57,7 +57,7 @@ Number of nets:           19
     default via: M9M10_PR
 [INFO DRT-0162] Library cell analysis.
 [INFO DRT-0163] Instance analysis.
-[INFO DRT-0164] Number of unique instances = 10.
+[INFO DRT-0164] Number of unique instances = 12.
 [INFO DRT-0168] Init region query.
 [INFO DRT-0024]   Complete FR_MASTERSLICE.
 [INFO DRT-0024]   Complete FR_VIA.
@@ -88,11 +88,11 @@ Number of nets:           19
 [INFO DRT-0033] via2 shape region query size = 0.
 [INFO DRT-0033] met3 shape region query size = 9.
 [INFO DRT-0033] via3 shape region query size = 0.
-[INFO DRT-0033] met4 shape region query size = 18.
+[INFO DRT-0033] met4 shape region query size = 15.
 [INFO DRT-0033] via4 shape region query size = 0.
-[INFO DRT-0033] met5 shape region query size = 0.
+[INFO DRT-0033] met5 shape region query size = 3.
 [INFO DRT-0033] via5 shape region query size = 0.
-[INFO DRT-0033] met6 shape region query size = 0.
+[INFO DRT-0033] met6 shape region query size = 6.
 [INFO DRT-0033] via6 shape region query size = 0.
 [INFO DRT-0033] met7 shape region query size = 0.
 [INFO DRT-0033] via7 shape region query size = 0.
@@ -102,14 +102,14 @@ Number of nets:           19
 [INFO DRT-0033] via9 shape region query size = 0.
 [INFO DRT-0033] met10 shape region query size = 0.
 [INFO DRT-0165] Start pin access.
-[INFO DRT-0078]   Complete 22 pins.
-[INFO DRT-0081]   Complete 10 unique inst patterns.
+[INFO DRT-0078]   Complete 26 pins.
+[INFO DRT-0081]   Complete 12 unique inst patterns.
 [INFO DRT-0084]   Complete 14 groups.
 #scanned instances     = 16
-#unique  instances     = 10
-#stdCellGenAp          = 102
-#stdCellValidPlanarAp  = 24
-#stdCellValidViaAp     = 66
+#unique  instances     = 12
+#stdCellGenAp          = 114
+#stdCellValidPlanarAp  = 36
+#stdCellValidViaAp     = 72
 #stdCellPinNoAp        = 0
 #stdCellPinCnt         = 34
 #instTermValidViaApCnt = 0
@@ -118,10 +118,10 @@ Number of nets:           19
 #macroValidViaAp       = 0
 #macroNoAp             = 0
 [INFO DRT-0166] Complete pin access.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 127.34 (MB), peak = 127.34 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 125.73 (MB), peak = 125.73 (MB)
 [INFO DRT-0151] Reading guide.
 
-Number of guides:     96
+Number of guides:     102
 
 [INFO DRT-0169] Post process guides.
 [INFO DRT-0176] GCELLGRID X 0 DO 3 STEP 450000 ;
@@ -179,9 +179,9 @@ Number of guides:     96
 [INFO DRT-0036] via3 guide region query size = 0.
 [INFO DRT-0036] met4 guide region query size = 13.
 [INFO DRT-0036] via4 guide region query size = 0.
-[INFO DRT-0036] met5 guide region query size = 4.
+[INFO DRT-0036] met5 guide region query size = 7.
 [INFO DRT-0036] via5 guide region query size = 0.
-[INFO DRT-0036] met6 guide region query size = 4.
+[INFO DRT-0036] met6 guide region query size = 7.
 [INFO DRT-0036] via6 guide region query size = 0.
 [INFO DRT-0036] met7 guide region query size = 4.
 [INFO DRT-0036] via7 guide region query size = 0.
@@ -987,7 +987,6 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
-[INFO DRT-0184] Done with 39 vertical wires in 1 frboxes and 40 horizontal wires in 1 frboxes.
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -1066,6 +1065,7 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+[INFO DRT-0184] Done with 42 vertical wires in 1 frboxes and 43 horizontal wires in 1 frboxes.
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -2350,11 +2350,271 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
-[INFO DRT-0186] Done with 24 vertical wires in 1 frboxes and 10 horizontal wires in 1 frboxes.
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+[INFO DRT-0186] Done with 28 vertical wires in 1 frboxes and 10 horizontal wires in 1 frboxes.
 [INFO DRT-0182] Complete track assignment.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 120.10 (MB), peak = 127.84 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 118.62 (MB), peak = 126.35 (MB)
 [INFO DRT-0187] Start routing data preparation.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 120.22 (MB), peak = 127.84 (MB)
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 118.62 (MB), peak = 126.35 (MB)
 [INFO DRT-0194] Start detail routing.
 [INFO DRT-0195] Start 0th optimization iteration.
 Warning: no min spacing rule
@@ -2874,6 +3134,24 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: connect6 
     bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
@@ -3890,6 +4168,36 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: connect6 
     bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
@@ -4303,9 +4611,93 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: connect6 
     bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -5149,36 +5541,36 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 121.68 (MB).
+    elapsed time = 00:00:00, memory = 119.89 (MB).
 [INFO DRT-0199]   Number of violations = 4.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 633.98 (MB), peak = 675.95 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2696 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 632.25 (MB), peak = 674.29 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2850 um.
+Total wire length on LAYER met2 = 2756 um.
 Total wire length on LAYER met3 = 1320 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 329 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 89 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 540 um.
 Total wire length on LAYER met9 = 1110 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 118.
+Up-via summary (total 118):.
 
 ----------------------
  FR_MASTERSLICE      0
            met1     36
            met2     39
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   118
 
 
 [INFO DRT-0195] Start 1st optimization iteration.
@@ -5699,6 +6091,24 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: connect6 
     bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
@@ -6715,417 +7125,6 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: connect6 
-    bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
-connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
-connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -7256,6 +7255,599 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: soln3 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+connect31 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: soln3 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+connect31 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: connect6 
+    bbox = ( 1559.78, 869.775 ) - ( 1559.95, 869.95 ) on Layer met2
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: soln3 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+connect31 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: soln3 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+connect31 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met5
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -7335,6 +7927,75 @@ Warning: marker bloat 4x width but could not find two grids to add marker cost
     bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
     bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
+Warning: marker bloat 4x width but could not find two grids to add marker cost
+  marker -- src: soln3 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
+connect31 
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -7439,253 +8100,251 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: soln3 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 Warning: marker bloat 4x width but could not find two grids to add marker cost
   marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
 connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
-connect31 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
-connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
-connect31 
-    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met1
-Warning: marker bloat 4x width but could not find two grids to add marker cost
-  marker -- src: soln3 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
-connect31 
-    bbox = ( 899.775, 900.05 ) - ( 900.225, 900.225 ) on Layer met2
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
-Warning: no min spacing rule
+    bbox = ( 899.775, 899.775 ) - ( 900.225, 900.225 ) on Layer met3
     Completing 10% with 4 violations.
-    elapsed time = 00:00:00, memory = 635.98 (MB).
-[INFO DRT-0199]   Number of violations = 1.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.89 (MB), peak = 678.89 (MB)
-Total wire length = 8877 um.
-Total wire length on LAYER met1 = 2820 um.
-Total wire length on LAYER met2 = 2696 um.
-Total wire length on LAYER met3 = 1261 um.
-Total wire length on LAYER met4 = 478 um.
+    elapsed time = 00:00:00, memory = 633.38 (MB).
+[INFO DRT-0199]   Number of violations = 3.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 676.42 (MB), peak = 676.42 (MB)
+Total wire length = 8996 um.
+Total wire length on LAYER met1 = 2880 um.
+Total wire length on LAYER met2 = 2217 um.
+Total wire length on LAYER met3 = 1290 um.
+Total wire length on LAYER met4 = 689 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
-Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met8 = 600 um.
+Total wire length on LAYER met9 = 1110 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 118.
-Up-via summary (total 118):.
+Total number of vias = 120.
+Up-via summary (total 120):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
-           met2     39
+           met1     36
+           met2     37
            met3     21
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   118
+                   120
 
 
 [INFO DRT-0195] Start 2nd optimization iteration.
-    Completing 10% with 1 violations.
-    elapsed time = 00:00:00, memory = 678.89 (MB).
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+    Completing 10% with 3 violations.
+    elapsed time = 00:00:00, memory = 676.80 (MB).
     Completing 20% with 1 violations.
-    elapsed time = 00:00:00, memory = 678.89 (MB).
+    elapsed time = 00:00:00, memory = 676.80 (MB).
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
+Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
@@ -8631,303 +9290,303 @@ Warning: no min spacing rule
 Warning: no min spacing rule
 Warning: no min spacing rule
     Completing 30% with 1 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 17th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 25th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 33rd optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 41st optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 50% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 60% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 49th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0195] Start 57th optimization iteration.
     Completing 10% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 20% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 30% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
     Completing 40% with 0 violations.
-    elapsed time = 00:00:00, memory = 680.26 (MB).
+    elapsed time = 00:00:00, memory = 678.05 (MB).
 [INFO DRT-0199]   Number of violations = 0.
-[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
 [INFO DRT-0198] Complete detail routing.
-Total wire length = 8876 um.
-Total wire length on LAYER met1 = 2790 um.
-Total wire length on LAYER met2 = 2756 um.
+Total wire length = 8995 um.
+Total wire length on LAYER met1 = 2430 um.
+Total wire length on LAYER met2 = 2397 um.
 Total wire length on LAYER met3 = 1290 um.
-Total wire length on LAYER met4 = 418 um.
+Total wire length on LAYER met4 = 629 um.
 Total wire length on LAYER met5 = 0 um.
-Total wire length on LAYER met6 = 0 um.
+Total wire length on LAYER met6 = 209 um.
 Total wire length on LAYER met7 = 0 um.
 Total wire length on LAYER met8 = 480 um.
-Total wire length on LAYER met9 = 1140 um.
+Total wire length on LAYER met9 = 1560 um.
 Total wire length on LAYER met10 = 0 um.
-Total number of vias = 112.
-Up-via summary (total 112):.
+Total number of vias = 114.
+Up-via summary (total 114):.
 
 ----------------------
  FR_MASTERSLICE      0
-           met1     38
+           met1     34
            met2     37
            met3     17
-           met4      4
-           met5      4
+           met4      7
+           met5      7
            met6      4
            met7      4
            met8      4
            met9      0
 ----------------------
-                   112
+                   114
 
 
-[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 680.26 (MB), peak = 680.26 (MB)
+[INFO DRT-0267] cpu time = 00:00:02, elapsed time = 00:00:00, memory = 678.05 (MB), peak = 678.05 (MB)
 
 [INFO DRT-0180] Post processing.
 [INFO GRT-0240] Net out detailed route wire length: 359.77um
@@ -8940,10 +9599,9 @@ Up-via summary (total 112):.
 	Layer met8 : 420.00um
 	Layer met9 : 59.77um
 [INFO GRT-0240] Net soln3 detailed route wire length: 869.50um
-	Layer met1 : 420.00um
 	Layer met2 : 300.00um
 	Layer met3 : 29.73um
-	Layer met9 : 119.78um
+	Layer met9 : 539.77um
 [INFO GRT-0240] Net connect0 detailed route wire length: 329.73um
 	Layer met1 : 30.00um
 	Layer met2 : 269.73um
@@ -8966,19 +9624,19 @@ Up-via summary (total 112):.
 	Layer met3 : 450.00um
 	Layer met4 : 29.77um
 [INFO GRT-0240] Net connect31 detailed route wire length: 389.23um
-	Layer met1 :  0.28um
-	Layer met2 : 329.73um
+	Layer met2 : 30.00um
 	Layer met3 : 29.73um
-	Layer met4 : 29.50um
+	Layer met4 : 300.00um
+	Layer met6 : 29.50um
 [INFO GRT-0240] Net connect32 detailed route wire length: 899.77um
 	Layer met2 : 510.00um
 	Layer met3 : 360.00um
 	Layer met4 : 29.77um
-[INFO GRT-0240] Net connect33 detailed route wire length: 600.05um
-	Layer met1 : 449.73um
-	Layer met2 : 90.00um
-	Layer met3 :  0.55um
-	Layer met4 : 59.77um
+[INFO GRT-0240] Net connect33 detailed route wire length: 659.50um
+	Layer met1 : 479.73um
+	Layer met3 :  0.28um
+	Layer met4 : 30.00um
+	Layer met6 : 149.50um
 [INFO GRT-0240] Net connect34 detailed route wire length: 59.23um
 	Layer met3 : 29.73um
 	Layer met4 : 29.50um
@@ -8989,11 +9647,12 @@ Up-via summary (total 112):.
 	Layer met2 : 60.00um
 	Layer met3 : 270.00um
 	Layer met4 : 29.77um
-[INFO GRT-0240] Net connect37 detailed route wire length: 1020.60um
-	Layer met1 : 840.27um
-	Layer met2 : 120.00um
-	Layer met3 :  0.55um
-	Layer met4 : 59.77um
+[INFO GRT-0240] Net connect37 detailed route wire length: 1080.05um
+	Layer met1 : 870.27um
+	Layer met2 : 150.00um
+	Layer met3 :  0.28um
+	Layer met4 : 30.00um
+	Layer met6 : 29.50um
 [INFO GRT-0240] Net connect5 detailed route wire length: 569.23um
 	Layer met1 : 480.00um
 	Layer met2 : 29.73um
@@ -9001,4 +9660,4 @@ Up-via summary (total 112):.
 [INFO GRT-0240] Net connect6 detailed route wire length: 329.73um
 	Layer met1 :  0.28um
 	Layer met2 : 329.45um
-Elapsed time: 0:00.88[h:]min:sec. Average CPU: 318%. Peak memory: 697228KB.
+Elapsed time: 0:00.81[h:]min:sec. Average CPU: 286%. Peak memory: 694960KB.
